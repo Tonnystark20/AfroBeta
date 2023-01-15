@@ -1,0 +1,468 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Clicker+Script&family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    
+    --color-white: #fff;
+    --color-light: #f4f4f4;
+    --color-dark: #525252;
+    --color-black: #141415;
+    --color-primary: #1e93f2;
+    --color-primary-light:hsl(14, 89%, 53%, 12%);
+    --color-succeess: #29f5a6;
+    --color-warning: #ffce31;
+
+    --transition:all 300ms ease;
+
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+
+}
+body {
+    background: var(--color-white);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark);
+    max-inline-size: 100vw;
+}
+h1, h2, h3, h4,h5 {
+    color: var(--color-black);
+    line-height: 0.9;
+}
+h1 {
+    font-size: 3rem;
+    
+    
+
+}
+h2 {
+    font-size: 2rem;
+    margin-block-end: 3rem ;
+    text-decoration-line: underline;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.2rem;
+}
+h5 {
+    font-size: 0.86rem;
+}
+p{
+    line-height: 1.8;
+    color: var(--color-black)
+}
+
+section {
+    padding: 10rem 0 7rem;
+    max-inline-size: 100vw;
+    overflow: hidden;
+}
+section h1 {
+    text-align: center;
+    display: block;
+    margin-block-end: 5rem;
+
+}
+
+.btn {
+    padding: 1rem 3rem ;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    display: inline-block;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+.btn:hover { 
+    box-shadow:  0 2rem  2rem var(--color-primary-light);
+}
+.btn-primary {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 10px;
+    font-weight: 600;
+    
+}
+
+.btn-primary:hover {
+    color: var(--color-white);
+    background: var(--color-black);
+    max-inline-size: fit-content;
+}
+/*====================NAVBAR========================*/
+nav {
+    /* background: rgb(123, 51, 25); */
+    inline-size: 100%;
+    block-size: 5rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    inset-block-start: 0;
+    z-index: 2;
+    border-block-end: 1px solid var(--color-light) ;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    
+    block-size: 100%;
+    
+}
+nav button {
+    display: none;
+}
+nav .logo {
+block-size: 5rem;
+inline-size: 95px;
+align-items: flex-start;
+margin-inline-start: 0rem;
+}
+nav .container ul {
+    display: flex;
+    block-size: 100%;
+}
+nav .container ul li {
+    block-size: 100%;
+    inline-size:7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--color-black);
+    position: relative;
+    transition: var(--transition);
+
+}
+nav .container ul li a:hover {
+    color: var(--color-primary);
+}
+
+.window-scroll {
+    background: var(--color-white);
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+    }
+/*===============TEAM =================*/
+.team {
+    background-image: url(/images/mountain.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    }
+    
+    .team h1 {
+        color: var(--color-black);
+    
+        text-align: center;
+    }
+    .team_container {
+    display: grid;
+    
+    gap:1rem;
+    inline-size: 100%;    
+    align-items: center;
+    justify-content: center;
+        
+    
+    }
+    .team_member {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    inline-size: 100%;
+    padding: 20px;
+    block-size: 400px;
+    justify-content: space-evenly;
+        }
+    .team_member:hover {
+    background: transparent;
+    
+    
+    }
+    .team_member-image img{
+    filter:saturate(0);
+    border-radius: 100%;
+    max-block-size: 100%;
+    max-inline-size: 100%;
+
+   
+}
+    
+    .team_member:hover img {
+    filter: saturate(1);
+    }
+    .team_member-info * {
+    
+    text-align: center;
+    margin-block-start: 1.4rem;
+    color: black;
+    
+    }
+    .team_member-info h3 {
+        color: var(--color-white);
+    }
+    .team_member-info   h4 {
+        color: var(--color-white);
+    }
+    .team_member-info  , p {
+    color: var(--color-black);
+    font-family: 'Dosis';
+    font-weight: 700;
+    padding: 30px 200px;
+    
+    justify-content: center;
+    }
+    .team_member-socials {
+    position: absolute;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    inset-inline-end: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 1rem 1rem  1rem 1rem;
+    transition:var (--transition);
+    }
+    
+    .team_member-socials a {
+    padding: 1rem;
+    color: var(--color-black);
+    font-size: medium;
+    inline-size: 3rem;
+    block-size: 3rem;
+    } 
+    .team_member:hover .team_member-socials {
+    inset-inline-end:31rem ;
+    }
+    
+#contact {
+    background: linear-gradient( 90deg, #0e3959 0%, #0e3959 30% , #03a9f5 30%, #03a9f5 100%);
+    
+    filter:brightness(70%) ;
+    font-family: 'Poppins', sans-serif;
+}
+    
+.contactUs {
+    position: relative;
+    inline-size: 100%;
+    padding: 10px 100px;
+
+}
+.contactUs .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.contactUs .title h2{
+    color: var(--color-white);
+    font-weight: 500;
+
+}
+ .form
+  {
+    grid-area: form;
+ }
+ .info
+  {
+    grid-area: info;
+
+ }
+ .map  
+ {
+    grid-area: map;
+ }
+ .contact
+ {
+    padding: 40px;
+    background:var(--color-white);
+    box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+ }
+ .box1
+  {
+position: relative;
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 5fr 4fr;
+grid-template-areas:
+"form info"
+"form map" ;
+grid-gap: 20px;
+margin-block-start: 20px;
+
+ }
+ .contact h3 {
+    color: #0e3959;
+    font-weight: 500;
+    font-size: 1.4;
+ }
+
+
+/*=========================form css=======================*/
+
+.formBox {
+    position: relative;
+    inline-size: 100%;
+
+}
+.formBox .row50 {
+    display: flex;
+    gap: 20px;
+
+}
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 10px;
+    inline-size: 50%;
+}
+.formBox .row100 .inputBox {
+    inline-size: 100%;
+
+}
+.inputBox span {
+    color: #18b7ff;
+    margin-block-start: 10px;
+    margin-block-end: 5px;
+    font-weight: 500;
+}
+.inputBox input {
+    padding: 10px ;
+    font-size: 1.1em;
+    outline:  none;
+    border: 1px solid #333;
+}
+    .inputBox textarea {
+        padding: 10px ;
+        font-size: 1.1em;
+        outline:  none;
+        border:  1px solid #333;
+        resize: none;
+        min-block-size: 280px;
+        margin-block-end: 10px;
+    }
+.inputBox  input[type="submit"] {
+    background:var(--color-black);
+    color: #03a9f5 ;
+    border: none;
+    font-size: 1.1em;
+    max-inline-size: 140px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px ;
+    border-radius: 10px;
+}
+/*=====info================================*/
+.info5 {
+    background: #0e3959;
+}
+.info5 h3 { 
+    color: #fff
+}
+.info5 .infoBox div  {
+    display: flex;
+    align-items: center;
+    margin-block-end: 10px;
+}
+.info5 .infoBox div span { 
+inline-size: 40px;
+block-size: 40px;
+color: #fff;
+background: #18b7ff;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.5em;
+border-radius: 50%;
+
+margin-inline-end: 15px;
+
+}
+.info5 .infoBox div p{
+    color: #fff;
+    font-size: 1em;
+}
+.info5 .infoBox div a {
+ color: #ffff;
+ text-decoration: none;
+ font-size: 1.1em;
+}
+.sci {
+    margin-block-start: 40px;
+    display: flex;
+
+}
+.sci li {
+    list-style: none;
+    margin-inline-end: 15px;
+}
+.sci li a {
+    color: #fff;
+    font-size: 2em;
+}
+.sci li a:hover {
+color: #141415;
+}
+.map {
+    padding: 0;
+}
+
+
+.map iframe {
+    inline-size: 100%;
+    block-size: 100%;
+}
+/*responsive Design */
+@media  (max-with:991px) {
+    body{
+        background: var(--color-best);
+
+    }
+    .contactUs {
+        padding: 20px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-columns: 
+        "form"
+        "info"
+        "map";
+    }
+.map {
+    min-block-size: 300px;
+}
+.formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+}
+.inputBox {
+    inline-size: 100%;
+}
+.contact{
+ padding: 30px;   
+}
+.map {
+    min-block-size:300px;
+    padding: 0;
+}
+}
